@@ -19,7 +19,6 @@ build/
 # Data and results
 data/
 yolo_data/
-results/
 
 # Model files
 *.pt
