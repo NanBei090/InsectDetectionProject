@@ -4,8 +4,8 @@ from glob import glob
 from tqdm import tqdm
 from sklearn.model_selection import train_test_split
 
-img_dir = "../yolo_data/images/"
-lbl_dir = "../yolo_data/labels/"
+img_dir = "../yolo/yolo_data/images/"
+lbl_dir = "../yolo/yolo_data/labels/"
 
 # 获取所有图片路径
 all_images = sorted(glob(os.path.join(img_dir, "*.jpg")))
