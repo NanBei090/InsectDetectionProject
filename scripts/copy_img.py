@@ -3,9 +3,9 @@ import shutil
 from tqdm import tqdm
 
 # 路径设置
-label_dir = "../yolo_data/labels/"          # YOLO标签路径（.txt 文件）
+label_dir = "../yolo/yolo_data/labels/"  # YOLO标签路径（.txt 文件）
 image_src_dir = "../data/JPEGImages/"       # 所有原始图片所在目录（需修改为你实际目录）
-image_dst_dir = "../yolo_data/images/"      # 目标路径（复制到这里）
+image_dst_dir = "../yolo/yolo_data/images/"  # 目标路径（复制到这里）
 os.makedirs(image_dst_dir, exist_ok=True)
 
 # 允许的图片格式（可扩展）

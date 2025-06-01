@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 # 设置路径
 xml_dir = "../data/annotations"               # VOC XML 文件目录
-label_dir = "../yolo_data/labels/"            # YOLO 标签输出目录
+label_dir = "../yolo/yolo_data/labels/"  # YOLO 标签输出目录
 os.makedirs(label_dir, exist_ok=True)
 
 xml_files = [f for f in os.listdir(xml_dir) if f.endswith('.xml')]
