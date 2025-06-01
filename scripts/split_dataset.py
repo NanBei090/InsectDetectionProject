@@ -34,6 +34,6 @@ for subset, image_list, img_dst, lbl_dst in [
             shutil.move(img_path, dst_img)
         if os.path.exists(label_path):
             shutil.move(label_path, dst_lbl)
-print(f"训练集图片数量: {len(train_imgs)}，标签数量: {len(final_lbl_train)}")
-print(f"验证集图片数量: {len(val_imgs)}，标签数量: {len(final_lbl_val)}")
+print(f"训练集图片数量: {len(train_imgs)}")
+print(f"验证集图片数量: {len(val_imgs)}")
 print("数据集8:2划分并移动到最终目录完成。")
