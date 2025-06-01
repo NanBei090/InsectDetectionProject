@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Data and results
+data/
+yolo_data/
+results/
+
+# Model files
+*.pt
+*.pth
+*.h5
+*.ckpt
+
+# Shell scripts
+*.sh
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Others
+.env
+
+# models
+models/
