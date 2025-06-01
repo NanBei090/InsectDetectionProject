@@ -29,6 +29,7 @@ for xml_file in tqdm(xml_files, desc="Convert Labels"):
 
         label_lines = []
         for obj in root.findall("object"):
+            class_id = int(obj.find("name").text)
             bbox = obj.find("bndbox")
             xmin = int(float(bbox.find("xmin").text))
             ymin = int(float(bbox.find("ymin").text))
@@ -40,8 +41,7 @@ for xml_file in tqdm(xml_files, desc="Convert Labels"):
             box_w = (xmax - xmin) / w
             box_h = (ymax - ymin) / h
 
-            # 暂时设为类别 ID 0（如果有多个类别后续可替换）
-            label_lines.append(f"0 {x_center:.6f} {y_center:.6f} {box_w:.6f} {box_h:.6f}")
+            label_lines.append(f"{class_id} {x_center:.6f} {y_center:.6f} {box_w:.6f} {box_h:.6f}")
 
         label_path = os.path.join(label_dir, base + ".txt")
         with open(label_path, "w") as f:
